@@ -35,7 +35,7 @@ function App() {
           <>
             <div class='details'>
               <h2>{person.s_No}</h2>
-              <h2>{person.name}</h2>
+              <h2>Name : {person.name}</h2>
               <h2>{person.birthday}</h2>
               </div>
               <button onClick={() => {hello(person.s_No)}}>Remove</button>
