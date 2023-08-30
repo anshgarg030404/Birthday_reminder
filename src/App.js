@@ -1,13 +1,11 @@
 import data from "./data";
 import react,{useEffect, useState} from 'react';
-import './App.css';
+import './style.css';
 
 
-
-
-  
 
 function App() {
+  
   
   
   const [items,setItems]=useState([]);
@@ -19,8 +17,8 @@ function App() {
   },[])
   
   
-  const hello=(s_No)=>{
-     const newData = items.filter((item) => item.s_No !== s_No);
+  const hello=(name)=>{
+     const newData = items.filter((item) => item.name !== name );
      setItems(newData)
     //  console.log(newData);
 
@@ -30,15 +28,22 @@ function App() {
   
    return (
       <>
+      <h1 id="title">BIRTHDAY REMINDER</h1>
+
       {items.map((person) => {
         return (
           <>
             <div class='details'>
-              <h2>{person.s_No}</h2>
-              <h2>Name : {person.name}</h2>
+              <h2><img src="https://media.istockphoto.com/id/1252766024/vector/cv-vector-icon-cv-editable-stroke-cv-linear-symbol-for-use-on-web-and-mobile-apps-logo-print.jpg?s=612x612&w=0&k=20&c=z_G3RD1CEO8RZInFWMS7akgiScP-rLQ4qKRxhDjkvok=" width={50}></img> {person.name}  </h2>
               <h2>{person.birthday}</h2>
+              
+              <button class="but" onClick={() => {hello(person.name)}}>Remove</button>
+              
               </div>
-              <button onClick={() => {hello(person.s_No)}}>Remove</button>
+              <br></br>
+              <br></br>
+
+
             
      </>
         );

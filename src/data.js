@@ -24,6 +24,11 @@ export default [
     name: "Sachin Yadav",
     birthday: "13th April",
   },
+  {
+    s_No: 6,
+    name: "Prachi",
+    birthday: "23th July",
+  },
 ];
 
 
